@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @ObaidOIS
+- 👋 Hi, I’m Obaid Ullah Ishtiaq
 - 👀 I’m interested in Blockchain and decentralized application
 - 🌱 I’m currently learning Solidity and Brownie framework
 - 💞️ I’m looking to collaborate on any thing related to blockchain
