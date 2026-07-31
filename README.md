@@ -2,7 +2,7 @@
 
 🎯 **Full-Stack Python Developer | DevOps Engineer | Web3 Enthusiast**
 
-I'm a passionate software engineer with 4 years of experience building scalable, AI-powered applications across backend, frontend, and DevOps stacks. I specialize in:
+I'm a passionate software engineer with 5 years of experience building scalable, AI-powered applications across backend, frontend, and DevOps stacks. I specialize in:
 
 - 🧠 **Python (Django, Flask)** for robust backend APIs
 - 🌐 **Next.js & React** for dynamic, responsive frontends
