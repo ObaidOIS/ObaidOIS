@@ -13,10 +13,10 @@ At **HUM AI Lab**, I work on internal workflow automation and oversee systems de
 
 | Project | What I led or built |
 | :--- | :--- |
-| **[Neurow ↗](https://www.neurow.io/)** | Led the memory and MCP tool layer for an AI coaching product. Built consent and intent checks for agent access and revision history for goals and plans. |
-| **[SAHMK ↗](https://www.sahmk.sa/en)** | Built real-time market data and alerts for web, mobile, and WhatsApp. Integrated OpenAI analysis and led production deployment. |
-| **[TravelMaster ↗](https://travelmaster.ie/about-us/)** | Led delivery across backend services, passenger and driver apps, and an operator dashboard for event transport. |
-| **Capital Rock** | Built nine Solidity contracts for real-world asset tokenization, including an on-chain order book with atomic settlement. The contracts passed 499 tests and were deployed to Polygon testnet. |
+| **[Neurow](https://www.neurow.io/)** | Led the memory and MCP tool layer for an AI coaching product. Built consent and intent checks for agent access and revision history for goals and plans. |
+| **[SAHMK](https://www.sahmk.sa/en)** | Built real-time market data and alerts for web, mobile, and WhatsApp. Integrated OpenAI analysis and led production deployment. |
+| **[TravelMaster](https://travelmaster.ie/about-us/)** | Led delivery across backend services, passenger and driver apps, and an operator dashboard for event transport. |
+| **Capital Rock** | Built nine Solidity contracts for real-world asset tokenization, including an on-chain order book with atomic settlement. The test suite recorded 499 passing tests, and the contracts were deployed to Polygon testnet. |
 
 ## Technical toolkit
 
