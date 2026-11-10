@@ -1,30 +1,25 @@
-# Hi, I'm Obaidullah 👋
+# Obaidullah
 
-**Senior AI Engineer at HUM Network Limited · AI systems, backend architecture, and full-stack engineering**
+**Senior AI Engineer at HUM Network Limited**  
+AI systems · Backend architecture · Technical leadership
 
-[View my portfolio](https://obaidois.github.io/ObaidOIS/) · [LinkedIn](https://www.linkedin.com/in/obaidullah-ishtiaq/) · [Upwork](https://www.upwork.com/freelancers/~01a6339fab51740027)
+[Portfolio](https://obaidois.github.io/ObaidOIS/) · [LinkedIn](https://www.linkedin.com/in/obaidullah-ishtiaq/) · [Upwork](https://www.upwork.com/freelancers/~01a6339fab51740027) · [Email](mailto:obaidch00@gmail.com)
 
-I'm part of **HUM AI Lab**, where I work on automating internal workflows, streamlining company systems, and overseeing projects developed by external partners. Previously, as a **Team Lead at Cplusoft**, I led delivery across agent infrastructure, LLM security, and production SaaS.
+## About
 
-## Selected work
+I design and deliver AI systems and production software. At **HUM AI Lab**, I work on internal workflow automation and oversee systems developed by external partners. Previously, as a **Team Lead at Cplusoft**, I led engineering delivery for AI agent infrastructure, LLM security, and multi-tenant SaaS products.
 
-| Project | My contribution |
-| --- | --- |
-| [Neurow](https://www.neurow.io/) | Led the backend memory and MCP tool layer for an AI coaching product. Built consent and intent checks for agent access and added revision history for changes to user goals and plans. |
-| [SAHMK](https://www.sahmk.sa/en) | Built backend features for live Saudi stock-market data and alerts across web, mobile, and WhatsApp. Integrated OpenAI analysis and led production deployment. |
-| [TravelMaster](https://travelmaster.ie/about-us/) | Led delivery of an event transport platform across backend services, passenger and driver apps, and an operator dashboard. |
-| Capital Rock | Designed and built nine Solidity contracts for a real-world asset tokenization project, including an on-chain order book and atomic settlement. Deployed the contracts to Polygon testnet. |
+## Selected engineering work
 
-## What I build with
+- **[Neurow](https://www.neurow.io/) · AI agent infrastructure.** Led development of the backend memory and MCP tool layer for an AI coaching product. Built consent and intent checks for agent reads and writes, with revision history for changes to user goals and plans.
+- **[SAHMK](https://www.sahmk.sa/en) · Real-time data platform.** Built backend features for Saudi stock-market data and alerts across web, mobile, and WhatsApp. Integrated OpenAI analysis and led production deployment.
+- **[TravelMaster](https://travelmaster.ie/about-us/) · Full-stack delivery.** Led delivery of an event transport platform across backend services, passenger and driver apps, and an operator dashboard.
+- **Capital Rock · Smart contract engineering.** Designed nine Solidity contracts for real-world asset tokenization, including an on-chain order book and atomic settlement. Deployed to Polygon testnet.
 
-- **AI and agents** · Python, OpenAI, MCP, FastMCP, Qdrant, Neo4j
-- **Backend and system design** · FastAPI, Django REST Framework, PostgreSQL, Redis, Celery, Socket.IO
-- **Web and mobile** · Next.js, React, TypeScript, React Native
-- **Cloud and delivery** · Google Cloud, AWS, Docker, Nginx, GitHub Actions
-- **Blockchain** · Solidity, Hardhat, OpenZeppelin, Polygon, Ethereum Name Service
+## Technical focus
 
-## Get in touch
-
-I’m open to engineering roles and collaborations on AI systems, backend architecture, and production software.
-
-[obaidch00@gmail.com](mailto:obaidch00@gmail.com)
+- **AI engineering:** Python, OpenAI, MCP, FastMCP, Qdrant, Neo4j
+- **Backend and system design:** FastAPI, Django REST Framework, PostgreSQL, Redis, Celery, Socket.IO
+- **Web and mobile:** Next.js, React, TypeScript, React Native
+- **Cloud and delivery:** Google Cloud, AWS, Docker, Nginx, GitHub Actions
+- **Blockchain:** Solidity, Hardhat, OpenZeppelin, Polygon, Ethereum Name Service
