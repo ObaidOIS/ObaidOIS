@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f5ef">
+<meta name="description" content="Obaidullah, Senior AI Engineer at HUM Network Limited. Case studies in AI engineering, blockchain, backend and full-stack systems, scalable architecture, and production delivery.">
+<meta property="og:title" content="Obaidullah · Senior AI Engineer">
+<meta property="og:description" content="Engineering case studies in AI, blockchain, production platforms, and system design.">
+<meta property="og:type" content="website">
+<title>Obaidullah · Senior AI Engineer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23182e27'/%3E%3Ccircle cx='20' cy='20' r='9' fill='none' stroke='%23dceaa9' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #f6f5ef;
+  --surface: #fffefa;
+  --ink: #202523;
+  --muted: #515b55;
+  --line: #d4d9d0;
+  --accent: #245642;
+  --wash: #e9eee4;
+  --dark: #182e27;
+  --lime: #dceaa9;
+  --mono: ui-monospace, "SF Mono", Consolas, monospace;
+  --display: Georgia, "Times New Roman", serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 system-ui, -apple-system, sans-serif; }
+h1, h2, h3, h4, p { margin-top: 0; }
+a { color: inherit; text-underline-offset: .22em; }
+a, summary { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #537e42; outline-offset: 4px; }
+.wrap { width: min(1180px, calc(100% - 96px)); margin-inline: auto; }
+.skip { position: fixed; inset: 8px auto auto 12px; transform: translateY(-180%); background: var(--lime); color: var(--dark); padding: 10px 15px; z-index: 3; }
+.skip:focus { transform: none; }
+.top { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 67px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: .96rem; font-weight: 700; text-decoration: none; }
+.monogram { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; background: var(--dark); color: var(--lime); font: italic 19px/1 var(--display); }
+nav { display: flex; align-items: center; gap: 25px; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; font-size: .89rem; font-weight: 550; }
+nav a:hover { color: var(--accent); text-decoration: underline; }
+nav a:last-child { color: var(--accent); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1.14fr) minmax(0, .86fr); align-items: center; gap: clamp(28px, 6vw, 90px); padding-block: clamp(56px, 8vw, 108px) clamp(44px, 6vw, 78px); }
+.label { margin: 0 0 12px; color: var(--accent); font: 600 .72rem/1.45 var(--mono); letter-spacing: .075em; text-transform: uppercase; }
+h1 { margin: 0 0 15px; font: 400 clamp(3.45rem, 7.5vw, 7.1rem)/.94 var(--display); letter-spacing: -.065em; overflow-wrap: anywhere; }
+.role { font-size: clamp(1.12rem, 2.2vw, 1.55rem); font-weight: 650; letter-spacing: -.025em; margin: 0 0 21px; }
+.employer { display: block; font-size: .91rem; letter-spacing: 0; color: var(--accent); margin-top: 3px; font-weight: 550; }
+.intro, .section-note { color: var(--muted); max-width: 50ch; }
+.intro { font-size: 1.05rem; margin-bottom: 25px; }
+.hero-actions, .contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 46px; padding: 0 15px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; font-size: .88rem; font-weight: 650; }
+.button:hover { border-color: var(--accent); background: var(--wash); }
+.button.primary { background: var(--dark); color: #fcfdf4; border-color: var(--dark); }
+.button.primary:hover { background: var(--accent); border-color: var(--accent); }
+
+.hero-art { position: relative; isolation: isolate; margin: 0; color: #f4f6e9; background: var(--dark); border: 1px solid #304b3d; border-radius: 12px; overflow: hidden; }
+.hero-art::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .52; background: radial-gradient(ellipse at 78% 18%, #55785a 0%, transparent 57%), radial-gradient(#72917d 1px, transparent 1px) 0 0 / 19px 19px; }
+.diagram-title { padding: 19px 21px 0; margin: 0; color: var(--lime); font: 600 .7rem/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.hero-art svg { display: block; width: 100%; height: auto; }
+.hero-art figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; padding: 12px 21px; border-top: 1px solid #537064; color: #d8e4d6; font: 500 .68rem/1.45 var(--mono); }
+
+.band { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line); }
+.band a { display: flex; min-height: 63px; align-items: center; gap: 9px; padding: 10px 12px; color: var(--ink); text-decoration: none; font-weight: 650; font-size: .84rem; }
+.band a + a { border-left: 1px solid var(--line); }
+.band a:hover { background: var(--wash); }
+.band b { color: var(--accent); font: 600 .69rem/1 var(--mono); }
+.band .arrow { margin-left: auto; color: var(--accent); font-size: .92rem; }
+
+section:not(.hero) { padding-block: clamp(56px, 7.5vw, 98px); border-bottom: 1px solid var(--line); }
+.section-head { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .65fr); align-items: end; gap: 20px 40px; margin-bottom: 34px; }
+.section-head h2, .contact h2 { margin: 0; font: 400 clamp(2.8rem, 5.6vw, 5.15rem)/.98 var(--display); letter-spacing: -.055em; }
+.section-head .section-note { margin: 0 0 3px; }
+
+.work-group + .work-group { margin-top: 58px; }
+.group-head { display: grid; grid-template-columns: minmax(145px, .36fr) minmax(0, 1fr); gap: 8px 18px; align-items: baseline; border-top: 1px solid var(--line); padding-top: 19px; margin-bottom: 19px; }
+.group-head > .label { margin: 0; }
+.group-head h3 { font-size: clamp(1.38rem, 2.7vw, 2.12rem); line-height: 1.16; letter-spacing: -.035em; margin-bottom: 5px; }
+.group-head p:not(.label) { margin: 0; color: var(--muted); font-size: .92rem; }
+.work-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 0 20px; align-items: start; }
+.card { min-width: 0; }
+.featured { grid-row: span 3; align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; padding: clamp(21px, 3vw, 36px); background: var(--wash); border: 1px solid #cdd8c9; border-radius: 11px; }
+.featured-index { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid #c2cfc2; color: var(--accent); font: 600 .68rem/1.4 var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+.featured .feature-mark { width: min(100%, 206px); height: auto; align-self: end; color: var(--accent); opacity: .76; }
+.card:not(.featured) { border-bottom: 1px solid var(--line); padding: 0 4px 15px; }
+.card:not(.featured) + .card:not(.featured) { padding-top: 17px; }
+.card:not(.featured):last-child { border-bottom: 0; padding-bottom: 0; }
+.card .label { margin-bottom: 6px; font-size: .67rem; }
+.card h4 { margin-bottom: 5px; line-height: 1.16; font-size: clamp(1.19rem, 2vw, 1.52rem); letter-spacing: -.025em; }
+.featured h4 { font: 400 clamp(2.25rem, 4.8vw, 3.7rem)/1 var(--display); letter-spacing: -.045em; margin-bottom: 12px; }
+.card p:not(.label) { margin-bottom: 0; color: var(--muted); font-size: .93rem; }
+.featured .card-body > p:not(.label) { font-size: 1.02rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 12px 0 0; padding: 0; list-style: none; }
+.tags li { padding: 3px 7px; border: 1px solid #cdd6ca; border-radius: 4px; color: #354940; font: 500 .68rem/1.4 var(--mono); }
+details { margin-top: 8px; }
+summary { display: flex; align-items: center; gap: 7px; width: fit-content; min-height: 40px; cursor: pointer; list-style: none; color: var(--accent); font-size: .84rem; font-weight: 650; border-radius: 3px; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+" / ""; display: inline-grid; place-items: center; width: 18px; height: 18px; border: 1px solid #a5b7a9; border-radius: 50%; line-height: 1; }
+details[open] summary::before { content: "−" / ""; }
+summary:hover { text-decoration: underline; }
+details p { margin-top: 3px; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin: 16px 0 0; padding-block: 10px; border-block: 1px solid #c2cfc2; }
+.metrics div { display: flex; flex-direction: column-reverse; justify-content: end; }
+.metrics dt { color: var(--muted); font-size: .72rem; line-height: 1.35; }
+.metrics dd { margin: 0 0 4px; color: var(--accent); font-size: clamp(1.25rem, 2.6vw, 1.72rem); font-weight: 660; line-height: 1; }
+
+.architecture-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; overflow: hidden; border: 1px solid #cdd8c9; border-radius: 11px; background: var(--wash); }
+.architecture-card { display: flex; flex-direction: column; align-items: start; padding: clamp(20px, 3vw, 32px); }
+.architecture-card:nth-child(even) { border-left: 1px solid #cdd8c9; }
+.architecture-card:nth-child(n+3) { border-top: 1px solid #cdd8c9; }
+.architecture-card h3 { font-size: 1.2rem; line-height: 1.25; letter-spacing: -.023em; margin-bottom: 7px; }
+.architecture-card p:not(.label) { color: var(--muted); font-size: .92rem; margin-bottom: 11px; }
+.architecture-card a { margin-top: auto; color: var(--accent); font-size: .83rem; font-weight: 650; }
+.architecture-card a:hover { color: var(--ink); }
+
+.timeline { border-top: 1px solid var(--line); }
+.entry { display: grid; grid-template-columns: minmax(140px, .72fr) minmax(160px, 1fr) minmax(0, 1.8fr); gap: 8px 20px; padding: 19px 15px; border-bottom: 1px solid var(--line); }
+.entry:first-child { background: var(--wash); }
+.entry:last-child { border-bottom: 0; }
+.entry h3, .entry p { margin: 0; }
+.entry h3 { font-size: 1.04rem; line-height: 1.45; letter-spacing: -.018em; }
+.entry p { color: var(--muted); font-size: .91rem; }
+.entry .date { font: 600 .71rem/1.5 var(--mono); padding-top: 3px; }
+.entry .current { color: var(--accent); }
+.current i { display: inline-block; width: 7px; height: 7px; margin-right: 7px; background: #3f7754; border-radius: 50%; }
+
+.toolkit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; }
+.toolkit article { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); padding: 17px; }
+.toolkit h3 { font-size: 1rem; margin-bottom: 5px; }
+.toolkit p { color: var(--muted); font-size: .89rem; margin: 0; }
+.education { margin: 20px 0 0; color: var(--muted); font-size: .88rem; }
+.education strong { color: var(--ink); }
+section.contact { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 22px; align-items: end; margin-top: 42px; padding: clamp(26px, 5vw, 54px); background: var(--dark); color: #fcfdf4; border-radius: 12px; }
+.contact .label { color: var(--lime); }
+.contact h2 { font-size: clamp(2.5rem, 5vw, 4.35rem); }
+.contact p:not(.label) { margin: 14px 0 0; color: #d8e4d6; max-width: 48ch; }
+.contact .button { border-color: #678278; }
+.contact .button:hover { background: #2e4a3e; }
+.contact .button.primary { color: var(--dark); background: var(--lime); border-color: var(--lime); }
+.contact .button.primary:hover { background: #edf5cd; }
+.contact a:focus-visible { outline-color: var(--lime); }
+footer { display: flex; justify-content: space-between; gap: 12px; padding-block: 18px 26px; color: var(--muted); font: 500 .72rem/1.5 var(--mono); }
+footer a:hover { color: var(--accent); }
+
+@media (max-width: 960px) {
+  .wrap { width: calc(100% - 64px); }
+  .band a { font-size: .77rem; }
+  section.contact { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 40px); }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 45px; }
+  .hero-art { max-width: 520px; }
+  .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 23px; }
+  .band { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .band a { min-height: 48px; }
+  .band a:nth-child(3) { border-left: 0; }
+  .band a:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .group-head { grid-template-columns: 1fr; }
+  .work-grid { grid-template-columns: 1fr; gap: 0; }
+  .featured { grid-row: auto; margin-bottom: 18px; }
+  .feature-mark { display: none; }
+  .entry { grid-template-columns: minmax(127px, .6fr) minmax(0, 1fr); }
+  .entry > p:last-child { grid-column: 2; }
+  .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 490px) {
+  html { scroll-padding-top: 70px; }
+  .wrap { width: calc(100% - 32px); }
+  .top .wrap { min-height: 56px; }
+  .brand { gap: 6px; font-size: .82rem; }
+  .monogram { width: 24px; height: 24px; font-size: 15px; }
+  nav { gap: 10px; }
+  nav a { font-size: .75rem; }
+  .hero { padding-top: 38px; }
+  .intro { font-size: 1rem; }
+  .band a { font-size: .72rem; padding-inline: 6px; gap: 5px; }
+  .band .arrow { font-size: .78rem; }
+  .work-group + .work-group { margin-top: 37px; }
+  .architecture-grid, .toolkit { grid-template-columns: 1fr; }
+  .architecture-card:nth-child(even) { border-left: 0; }
+  .architecture-card + .architecture-card { border-top: 1px solid #cdd8c9; }
+  .entry { grid-template-columns: 1fr; gap: 5px; padding: 14px 11px; }
+  .entry > p:last-child { grid-column: auto; }
+  section.contact { margin-top: 27px; padding: 23px 18px; }
+  .contact .button { font-size: .78rem; padding-inline: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+.reference-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+.reference-link:hover { color: var(--ink); text-decoration-thickness: 2px; }
+.reference-link span { display: inline-block; font-size: .82em; text-decoration: none; }
+.project-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 5px; }
+.project-links a { display: inline-flex; gap: 5px; align-items: center; min-height: 32px; font-size: .84rem; font-weight: 650; }
+.email-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.email-address { font-size: .88rem; overflow-wrap: anywhere; }
+.copy-button { display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 5px; background: transparent; color: var(--lime); cursor: pointer; }
+.copy-button:hover { background: #2e4a3e; }
+.contact button[hidden] { display: none; }
+.contact button:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+.contact p.copy-status { font-size: .8rem; margin: 4px 0 0; }
+.copy-status:empty { margin: 0; }
+.contact-links { margin-top: 9px; }
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="#top"><span class="monogram" aria-hidden="true">O</span>Obaidullah</a>
+<nav aria-label="Main"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main id="main" class="wrap">
+<section class="hero" aria-labelledby="name">
+<div><p class="label">Portfolio / AI &amp; software engineering</p>
+<h1 id="name">Obaidullah</h1>
+<p class="role">Senior AI Engineer <span class="employer">at <a class="reference-link" href="https://www.humnetwork.tv/">HUM Network Limited <span aria-hidden="true">↗</span></a></span></p>
+<p class="intro">I design and lead delivery of AI, SaaS, and blockchain systems. My work spans agent tools, real-time APIs, multi-tenant backends, web and mobile apps, and cloud deployment.</p>
+<div class="hero-actions"><a class="button primary" href="#work">Explore selected work <span aria-hidden="true">↘</span></a><a class="button" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div></div>
+<figure class="hero-art">
+<p class="diagram-title">System design</p>
+<svg viewBox="0 0 440 285" role="img" aria-labelledby="system-diagram-label" focusable="false">
+<title id="system-diagram-label">Web, mobile, and agent interfaces connect through APIs and orchestration to data, memory, and external integrations.</title>
+<g fill="none" stroke="#a3bba6" stroke-width="1.2">
+<path d="M220 68v41m0 57v38m-120 0v23m240-23v23M100 204h240"/>
+<circle cx="220" cy="89" r="3.5" fill="#dceaa9"/>
+<circle cx="220" cy="204" r="3.5" fill="#dceaa9"/>
+</g>
+<g stroke="#8eab97" fill="#243f34">
+<rect x="92" y="19" width="256" height="49" rx="7"/>
+<rect x="92" y="109" width="256" height="57" rx="7" fill="#dceaa9" stroke="#dceaa9"/>
+<rect x="26" y="227" width="148" height="39" rx="7"/>
+<rect x="266" y="227" width="148" height="39" rx="7"/>
+</g>
+<g font-family="monospace" font-size="12" letter-spacing=".75" text-anchor="middle">
+<text x="220" y="48" fill="#e7eee2">WEB · MOBILE · AGENTS</text>
+<text x="220" y="142" fill="#182e27">APIs &amp; ORCHESTRATION</text>
+<text x="100" y="250" fill="#e7eee2">DATA &amp; MEMORY</text>
+<text x="340" y="250" fill="#e7eee2">INTEGRATIONS</text>
+</g>
+</svg>
+<figcaption><span>Illustrative system layers</span><span>01 / Architecture</span></figcaption>
+</figure>
+</section>
+<div class="band" aria-label="Jump to a focus area">
+<a href="#ai-work"><b aria-hidden="true">01</b>AI Engineering<span class="arrow" aria-hidden="true">↗</span></a>
+<a href="#platforms"><b aria-hidden="true">02</b>Backend &amp; Full Stack<span class="arrow" aria-hidden="true">↗</span></a>
+<a href="#blockchain"><b aria-hidden="true">03</b>Blockchain<span class="arrow" aria-hidden="true">↗</span></a>
+<a href="#architecture"><b aria-hidden="true">04</b>Architecture &amp; Scale<span class="arrow" aria-hidden="true">↗</span></a>
+</div>
+<section aria-labelledby="work-title">
+<div class="section-head" id="work"><div><p class="label">01 / Portfolio</p><h2 id="work-title">Selected work</h2></div><p class="section-note">Twelve projects across applied AI, production platforms, and blockchain, with implementation details and technology stacks.</p></div>
+<div class="work-group" id="ai-work">
+<div class="group-head"><p class="label">01 / Applied AI</p><div><h3>Agents, security &amp; automation</h3><p>Agent memory and tools, LLM guardrails, workflow automation, and model fine-tuning.</p></div></div>
+<div class="work-grid">
+<article class="card featured"><div class="featured-index"><span>Featured project</span><span>A</span></div><div class="card-body"><p class="label">Agent infrastructure · Tech lead</p><h4 id="neurow">Neurow</h4><p>Led the backend memory and MCP tool layer for an AI coaching product. Built a registry that checks user consent and agent intent before every read or write.</p><ul class="tags"><li>Python</li><li>FastMCP</li><li>PostgreSQL</li><li>Neo4j</li><li>Qdrant</li></ul><details open><summary>Engineering details</summary><p>Designed a multi-store memory architecture spanning PostgreSQL, Neo4j, Qdrant, and Mem0. A central capability registry governs agent access. Audited writes preserve revision history for goals and weekly and monthly plans. The coaching agent reaches those capabilities through MCP tools across desktop, web, and Telegram.</p></details>
+<div class="project-links"><a class="reference-link" href="https://www.neurow.io/">Neurow website <span aria-hidden="true">↗</span></a></div></div><svg class="feature-mark" viewBox="0 0 210 102" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.25"><path d="M15 51h47m83 0h48M145 51l48-31m-48 31 48 31"/><rect x="62" y="35" width="83" height="32" rx="5"/><circle cx="15" cy="51" r="4"/><circle cx="193" cy="20" r="4"/><circle cx="193" cy="51" r="4"/><circle cx="193" cy="82" r="4"/></g></svg></article>
+<article class="card">
+<div class="card-body"><p class="label">LLM security · Tech lead</p><h4>Anigma</h4><p>Led architecture and development for an LLM security platform with automated vulnerability assessments, security scanning, and penetration testing for AI applications.</p><ul class="tags"><li>Django</li><li>Next.js</li><li>Cloud Run</li><li>Cloud SQL</li></ul><details><summary>Engineering details</summary><p>Directed implementation of a Django and Next.js SaaS platform that brings multiple guardrails and automated security checks into one product. The cloud architecture used Google Cloud Run and Cloud SQL.</p></details></div>
+</article>
+<article class="card"><div class="card-body">
+<p class="label">Workflow automation · Team lead</p><h4>AI Meeting Note Taker</h4>
+<p>Led development of a meeting assistant that uses calendar and email integrations to join scheduled calls, capture captions, and produce post-meeting transcripts.</p>
+<ul class="tags"><li>Python</li><li>Playwright</li><li>JavaScript</li><li>Cloud Run</li><li>AWS S3</li></ul>
+<details><summary>Engineering details</summary><p>The workflow spans scheduling, browser automation, live caption capture, audio and video recording, and transcription. The system used Cloud Run and S3 for cloud execution and storage.</p></details>
+</div></article><article class="card"><div class="card-body">
+<p class="label">Generative AI · Team lead</p><h4>CelComic</h4>
+<p>Led fine-tuning of an SDXL image model for cel-shaded comic-style generation.</p>
+<ul class="tags"><li>SDXL</li><li>LoRA</li><li>Kohya SS</li><li>Python</li></ul>
+<details><summary>Engineering details</summary><p>Used a custom cel-shaded comic dataset and trained a LoRA adapter to specialize the base image model for the target visual style.</p></details>
+</div></article></div></div>
+<div class="work-group" id="platforms">
+<div class="group-head"><p class="label">02 / Production software</p><div><h3>Backend &amp; full-stack systems</h3><p>Real-time services, multi-tenant SaaS, and end-to-end delivery across web and mobile.</p></div></div>
+<div class="work-grid">
+<article class="card featured"><div class="featured-index"><span>Featured project</span><span>B</span></div><div class="card-body">
+<p class="label">Real-time operations · Team lead</p><h4>TravelMaster</h4>
+<p>Led end-to-end delivery of an event shuttle platform spanning passenger and driver mobile apps, backend services, and a web console for operators.</p>
+<ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>React Native</li><li>Socket.IO</li><li>Stripe</li></ul>
+<details open><summary>Engineering details</summary><p>Coordinated API and mobile development, live communication through Socket.IO, push notifications through Firebase Cloud Messaging, Stripe payments, and location features through Google Maps. The stack included GCP and Railway.</p></details>
+<div class="project-links"><a class="reference-link" href="https://travelmaster.ie/about-us/">TravelMaster website <span aria-hidden="true">↗</span></a><a class="reference-link" href="https://apps.apple.com/pk/app/travelmaster-driver/id6770487945">Driver app on the App Store <span aria-hidden="true">↗</span></a></div>
+</div><svg class="feature-mark" viewBox="0 0 210 102" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.25"><path d="M20 75c28 0 39-56 67-56s40 56 67 56h35M20 50h169" stroke-dasharray="3 5"/><path d="M20 75c28 0 39-56 67-56s40 56 67 56h35"/><circle cx="20" cy="75" r="5"/><circle cx="87" cy="19" r="5"/><circle cx="189" cy="75" r="5"/></g></svg></article><article class="card"><div class="card-body">
+<p class="label">Multi-tenant SaaS · Team lead</p><h4 id="insider-access">Insider Access</h4>
+<p>Led development of a white-label assessment platform with separate client databases, secure authentication, automated scoring, and PDF reporting.</p>
+<ul class="tags"><li>Django REST Framework</li><li>PostgreSQL</li><li>Celery</li><li>Redis</li><li>Next.js</li><li>AWS</li></ul>
+<details><summary>Engineering details</summary><p>Designed database isolation at the client level and oversaw the product from architecture and API development to AWS deployment and production support. Integrated Calendly and automated report generation.</p></details>
+<div class="project-links"><a class="reference-link" href="https://myinsideraccess.com/">Insider Access website <span aria-hidden="true">↗</span></a></div>
+</div></article><article class="card"><div class="card-body">
+<p class="label">Market data & subscriptions · Software engineer</p><h4 id="sahmk">Sahmk</h4>
+<p>Built backend features for a subscription platform delivering Saudi stock market data, alerts, and financial news across web, mobile, and WhatsApp.</p>
+<ul class="tags"><li>Django</li><li>Next.js</li><li>Socket.IO</li><li>Celery</li><li>Docker</li><li>OpenAI</li></ul>
+<details><summary>Engineering details</summary><p>Integrated OpenAI market analysis, text-to-speech, and the WhatsApp Business API. Built ingestion and scheduled reporting pipelines, added subscription payments, and led production deployment with Docker, Nginx, and CI/CD. The development environment ran on Google Cloud.</p></details>
+<div class="project-links"><a class="reference-link" href="https://www.sahmk.sa/en">SAHMK platform <span aria-hidden="true">↗</span></a></div>
+</div></article><article class="card"><div class="card-body">
+<p class="label">Multi-tenant products · Full-stack engineer</p><h4>Dorsa.ai & NoBueNo</h4>
+<p>Contributed to multi-tenant products for hospital operations and hiring while working at Bluesoft.</p>
+<ul class="tags"><li>Django</li><li>Celery</li><li>Next.js</li><li>Docker</li></ul>
+<details><summary>Engineering details</summary><p>Worked on hospital operations automation for Dorsa.ai. For NoBueNo, established development environments, maintained the product, and added crash-reporting middleware.</p></details>
+<div class="project-links"><a class="reference-link" href="https://www.dorsa.ai/">Dorsa website <span aria-hidden="true">↗</span></a><a class="reference-link" href="https://www.linkedin.com/company/wearenobueno/">NoBueno on LinkedIn <span aria-hidden="true">↗</span></a></div>
+</div></article></div></div>
+<div class="work-group" id="blockchain">
+<div class="group-head"><p class="label">03 / Web3 engineering</p><div><h3>Blockchain &amp; smart contracts</h3><p>Tokenization, on-chain settlement, wallet integrations, and Ethereum identity.</p></div></div>
+<div class="work-grid">
+<article class="card featured"><div class="featured-index"><span>Featured project</span><span>C</span></div><div class="card-body">
+<p class="label">Real-world asset tokenization · Freelance</p><h4>Capital Rock</h4>
+<p>Designed and built a Polygon smart-contract system for tokenized assets, with investor eligibility checks, secondary trading, and cash-flow distributions.</p><dl class="metrics" aria-label="Capital Rock engineering metrics">
+<div><dt>Smart contracts</dt><dd>9</dd></div>
+<div><dt>Passing tests</dt><dd>499</dd></div>
+<div><dt>Test coverage</dt><dd>86%+</dd></div>
+</dl>
+<ul class="tags"><li>Solidity</li><li>Hardhat</li><li>OpenZeppelin</li><li>TypeScript</li><li>Polygon</li></ul>
+<details open><summary>Engineering details</summary><p>Implemented an ERC-3643-style security token with identity, jurisdiction, and investor-category checks. Built an on-chain order book with atomic settlement and a Merkle distributor for cash-flow payouts. Deployed the contracts to Polygon testnet and documented them.</p></details>
+</div><svg class="feature-mark" viewBox="0 0 210 102" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.25"><path d="m105 14 37 20v36l-37 20-37-20V34Zm0 0v36m-37-16 37 16 37-16m-37 16v40M68 52H28m114 0h40"/><circle cx="28" cy="52" r="4"/><circle cx="182" cy="52" r="4"/></g></svg></article><article class="card"><div class="card-body">
+<p class="label">Web3 identity · Full-stack developer</p><h4>ENS Authentication</h4>
+<p>Built an Ethereum Name Service authentication app and packaged the integration for reuse through npm.</p>
+<ul class="tags"><li>Ethereum Name Service</li><li>Django</li><li>React</li><li>AWS</li></ul>
+<details><summary>Engineering details</summary><p>Developed the web application and a reusable npm package at Devnow.io, covering both the product integration and the developer-facing package.</p></details>
+</div></article><article class="card"><div class="card-body">
+<p class="label">NFT marketplace · Full-stack developer</p><h4>Fat Cats Marketplace</h4>
+<p>Developed and maintained an NFT marketplace and connected wallet flows with Solidity contracts.</p>
+<ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>Solidity</li><li>Wagmi</li><li>WalletConnect</li></ul>
+<details><summary>Engineering details</summary><p>Integrated Solidity smart contracts through Wagmi and added WalletConnect for wallet interactions. The application also used Firebase and AWS S3.</p></details>
+</div></article><article class="card"><div class="card-body">
+<p class="label">Hybrid web application · Freelance</p><h4>Ethereum Crowdfunding</h4>
+<p>Built a crowdfunding platform with a Next.js frontend, Django user registration, and Ethereum smart contracts for crowdfunding data.</p>
+<ul class="tags"><li>Ethereum</li><li>Smart contracts</li><li>Django</li><li>Next.js</li></ul>
+<details><summary>Engineering details</summary><p>Kept user registration in the web backend and stored crowdfunding details in smart contracts, connecting both parts through the application.</p></details>
+</div></article></div></div>
+</section>
+<section aria-labelledby="architecture-title">
+<div class="section-head" id="architecture"><div><p class="label">02 / System design</p><h2 id="architecture-title">Architecture &amp; scale</h2></div><p class="section-note">Design decisions from systems I helped build, from tenant isolation and live updates to cloud deployment.</p></div>
+<div class="architecture-grid">
+<article class="architecture-card"><p class="label">01 / Data isolation</p><h3>Separate tenant databases</h3><p>For Insider Access, I designed a separate database for each client to isolate assessment data within a shared SaaS product.</p><a href="#insider-access">Insider Access <span aria-hidden="true">↗</span></a></article>
+<article class="architecture-card"><p class="label">02 / Workload separation</p><h3>Live updates and scheduled jobs</h3><p>At Sahmk, I worked on live market updates and alerts alongside scheduled ingestion and personalized reports. Socket.IO supported live delivery and Celery handled background work.</p><a href="#sahmk">Sahmk <span aria-hidden="true">↗</span></a></article>
+<article class="architecture-card"><p class="label">03 / Trust boundaries</p><h3>Permissioned agent access</h3><p>For Neurow, I put consent and intent checks in front of agent reads and writes, and added revision history for changes to user goals and plans.</p><a href="#neurow">Neurow <span aria-hidden="true">↗</span></a></article>
+<article class="architecture-card"><p class="label">04 / Production delivery</p><h3>Deployments and release automation</h3><p>At Sahmk, I containerized services, configured Nginx and server firewalls, and set up CI/CD. At Cplusoft, I led projects through cloud deployment and production support.</p><a href="#experience">Career timeline <span aria-hidden="true">↗</span></a></article>
+</div>
+</section>
+<section aria-labelledby="experience-title">
+<div class="section-head" id="experience"><div><p class="label">03 / Career</p><h2 id="experience-title">Experience</h2></div><p class="section-note">From full-stack product development to technical leadership and senior AI engineering.</p></div>
+<div class="timeline">
+<article class="entry"><p class="date current"><i></i>Oct 2026 – Present</p><div><h3><a class="reference-link" href="https://www.humnetwork.tv/">HUM Network Limited <span aria-hidden="true">↗</span></a></h3><p>Senior AI Engineer · HUM AI Lab</p></div><p>I work with the HUM AI Lab team to automate internal workflows and streamline how teams use company systems. I also oversee systems and projects developed by external partners.</p></article>
+<article class="entry"><p class="date">Jan 2026 – Sep 2026</p><div><h3><a class="reference-link" href="https://cplusoft.com/">Cplusoft <span aria-hidden="true">↗</span></a></h3><p>Team Lead</p></div><p>Led AI and SaaS projects across agent infrastructure, LLM security, and real-time operations.</p></article>
+<article class="entry"><p class="date">Feb 2024 – Jan 2026</p><div><h3><a class="reference-link" href="https://www.sahmk.sa/en">Sahmk <span aria-hidden="true">↗</span></a></h3><p>Software Engineer</p></div><p>Built real-time Saudi market data and alerts for web, mobile, and WhatsApp. Integrated OpenAI for market analysis and led production deployment.</p></article>
+<article class="entry"><p class="date">Jul 2024 – Jul 2025</p><div><h3>Bluesoft</h3><p>Full-Stack Software Engineer</p></div><p>Contributed to multi-tenant hiring and hospital operations platforms, automated trading, and legal data collection for AI training.</p></article>
+<article class="entry"><p class="date">Nov 2023 – Mar 2024</p><div><h3><a class="reference-link" href="https://www.octaloop.io/">Octaloop Technologies <span aria-hidden="true">↗</span></a></h3><p>Full Stack Web Developer</p></div><p>Integrated wallet and smart contract flows for an NFT marketplace and added AI-assisted business planning to a SaaS product.</p></article>
+<article class="entry"><p class="date">Apr 2023 – Dec 2023</p><div><h3>SimFazemos</h3><p>Full Stack Web Developer</p></div><p>Helped migrate <a class="reference-link" href="https://tictag.com.br/">TicTag <span aria-hidden="true">↗</span></a> from Django templates to Django REST Framework and Next.js.</p></article>
+<article class="entry"><p class="date">Sep 2022 – Mar 2023</p><div><h3>DRIP. Gaming</h3><p>Software Engineer</p></div><p>Built and maintained web and streaming features using Next.js, TypeScript, and video SDKs.</p></article>
+<article class="entry"><p class="date">Mar 2022 – Sep 2022</p><div><h3>Devnow.io</h3><p>Full Stack Web Developer</p></div><p>Built an ENS authentication app and npm package, and developed marketplace features in Next.js.</p></article>
+</div></section>
+<section aria-labelledby="toolkit-title">
+<div class="section-head" id="toolkit"><div><p class="label">04 / Technical stack</p><h2 id="toolkit-title">Toolkit</h2></div></div>
+<div class="toolkit">
+<article><h3>AI &amp; agent infrastructure</h3><p>OpenAI, MCP, FastMCP, Mem0, Qdrant, Neo4j, SDXL, LoRA</p></article>
+<article><h3>Backend &amp; data</h3><p>Python, Django REST Framework, FastAPI, Flask, PostgreSQL, Redis, Celery, Socket.IO</p></article>
+<article><h3>Web &amp; mobile</h3><p>Next.js, React, TypeScript, Node.js, React Native, Expo</p></article>
+<article><h3>Blockchain</h3><p>Solidity, Hardhat, OpenZeppelin, Polygon, Ethereum Name Service, Wagmi, WalletConnect</p></article>
+<article><h3>Cloud &amp; operations</h3><p>Google Cloud Run, Cloud SQL, AWS, Docker, Linux, Nginx, GitHub Actions</p></article>
+<article><h3>Testing &amp; integrations</h3><p>pytest, Hardhat testing, Playwright, Stripe, Firebase Cloud Messaging, WhatsApp Business API</p></article>
+</div>
+<p class="education"><strong>BS Software Engineering</strong> · <a class="reference-link" href="https://www.cuiwah.edu.pk/">COMSATS University Islamabad, Wah Campus <span aria-hidden="true">↗</span></a> · 2023</p>
+</section>
+<section id="contact" class="contact" aria-labelledby="contact-title">
+<div><p class="label">05 / Contact</p><h2 id="contact-title">Let’s work together.</h2><p>Get in touch about engineering roles, client projects, or technical collaboration across AI, blockchain, and production software.</p></div>
+<div class="contact-actions">
+<div class="email-actions"><a id="contact-email" class="email-address" href="mailto:obaidch00@gmail.com">obaidch00@gmail.com</a><button class="copy-button" type="button" id="copy-email" aria-label="Copy email address" title="Copy email address" hidden>
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+</button></div>
+<p id="copy-status" class="copy-status" role="status"></p>
+<div class="contact-links"><a class="button" href="https://github.com/ObaidOIS">GitHub <span aria-hidden="true">↗</span></a><a class="button" href="https://www.linkedin.com/in/obaidullah-ishtiaq/">LinkedIn <span aria-hidden="true">↗</span></a></div>
+</div>
+</section>
+</main>
+<footer class="wrap"><span>Obaidullah / Engineering portfolio</span><a href="#top">Back to top ↑</a></footer>
+<script>
+const copyButton = document.querySelector('#copy-email');
+const emailLink = document.querySelector('#contact-email');
+const copyStatus = document.querySelector('#copy-status');
+
+copyButton.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(emailLink.textContent.trim());
+    copyStatus.textContent = 'Email address copied.';
+  } catch {
+    const address = document.createRange();
+    address.selectNodeContents(emailLink);
+    const selection = window.getSelection();
+    if (selection) {
+      selection.removeAllRanges();
+      selection.addRange(address);
+    }
+    copyStatus.textContent = 'Copy the email address using your browser’s copy command.';
+  }
+});
+copyButton.hidden = false;
+</script>
+</body>
+</html>
